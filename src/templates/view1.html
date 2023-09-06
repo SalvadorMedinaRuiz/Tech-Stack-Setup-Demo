@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View1</title>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <form action="/view1" method="POST">{% csrf_token %}
+        <p>Please enter a name:</p>
+        <input type="text" name="name" placeholder="Enter name" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
