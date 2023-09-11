@@ -3,13 +3,20 @@
 <head>
     <title>View1</title>
 </head>
-
-<body>
-    <h1>Hello!</h1>
-    <form action="/view1" method="POST">{% csrf_token %}
-        <p>Please enter a name:</p>
-        <input type="text" name="name" placeholder="Enter name" required>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+    <body>
+        {% if username == None %}
+            <h1>Hello!</h1>
+        {% else %}
+            <h1>Hello {{username}}!</h1>
+        {% endif %}
+        <form action="/view1" method="POST">{% csrf_token %}
+            <p>Please enter a name:</p>
+            <input type="text" name="name" placeholder="Enter name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+    <footer>
+        <p><a href="http://127.0.0.1:8000/view1">Link to View1</a></p>
+        <p><a href="http://127.0.0.1:8000/view2">Link to View2</a></p>
+    </footer>
 </html>

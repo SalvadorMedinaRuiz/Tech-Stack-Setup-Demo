@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
-
-<body>
-    <form action="/view1" method="POST">{% csrf_token %}
-        <p>Please enter a name:</p>
-        <input type="text" name="name" placeholder="Enter name" required>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+    <body>
+        <form action="/view1" method="POST">{% csrf_token %}
+            <p>Please enter a name:</p>
+            <input type="text" name="name" placeholder="Enter name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+    <footer>
+        <p><a href="http://127.0.0.1:8000/view1">Link to View1</a></p>
+        <p><a href="http://127.0.0.1:8000/view2">Link to View2</a></p>
+    </footer>
 </html>

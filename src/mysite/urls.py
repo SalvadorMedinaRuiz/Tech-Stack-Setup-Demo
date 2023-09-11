@@ -20,9 +20,11 @@ from django.urls import path
 from personal.views import (
     home_screen_view,
     view1,
+    view2,
 )
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_screen_view, name="home"),
     path('view1', view1),
+    path('view2', view2),
 ]
