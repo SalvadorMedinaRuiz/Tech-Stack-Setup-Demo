@@ -4,10 +4,10 @@
     <title>View1</title>
 </head>
     <body>
-        {% if username == None %}
+        {% if latest_person.name == None %}
             <h1>Hello!</h1>
         {% else %}
-            <h1>Hello {{username}}!</h1>
+            <h1>Hello {{latest_person.name}}!</h1>
         {% endif %}
         <form action="/view1" method="POST">{% csrf_token %}
             <p>Please enter a name:</p>
